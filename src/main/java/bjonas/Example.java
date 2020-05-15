@@ -1,5 +1,7 @@
 package bjonas;
 
+import com.github.davidmoten.rtree.Entry;
+import com.github.davidmoten.rtree.Entries;
 import com.github.davidmoten.rtree.geometry.Circle;
 import com.github.davidmoten.rtree.geometry.Geometries;
 import com.github.davidmoten.rtree.geometry.Rectangle;
@@ -20,6 +22,9 @@ public class Example {
         LOGGER.info("activating");
         testDistance();
         testMbr();
+        LOGGER.info("entries");
+        Circle circle = circle(1, 2, 3);
+        Entry<Circle, Circle> entry = Entries.entry(circle, circle);
     }
 
 
