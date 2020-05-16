@@ -2,6 +2,7 @@ package bjonas;
 
 import com.github.davidmoten.rtree.Entry;
 import com.github.davidmoten.rtree.Entries;
+//import com.github.davidmoten.rtree.internal.EntryDefault;
 import com.github.davidmoten.rtree.geometry.Circle;
 import com.github.davidmoten.rtree.geometry.Geometries;
 import com.github.davidmoten.rtree.geometry.Rectangle;
@@ -25,6 +26,7 @@ public class Example {
         LOGGER.info("entries");
         Circle circle = circle(1, 2, 3);
         Entry<Circle, Circle> entry = Entries.entry(circle, circle);
+        // EntryDefault.entry(circle, circle);
     }
 
 
